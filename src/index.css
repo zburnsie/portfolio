@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ─── Theme tokens ─── */
+@theme {
+  --color-sand:      #fdf6e3;
+  --color-sand-dark: #f0e0c0;
+  --color-ocean:     #7dd3fc;
+  --color-sunset:    #fb923c;
+  --color-flamingo:  #f9a8d4;
+  --color-sun:       #fde68a;
+  --color-coral:     #f43f5e;
+  --color-ink:       #3b2a1a;
+  --color-ink-light: #7a5c3e;
+}
+
+/* ─── Global resets ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: #fdf6e3;
+  color: #3b2a1a;
+  min-height: 100vh;
+}
+
+/* ─── Dot-grid texture ─── */
+.dot-grid {
+  background-image: radial-gradient(#fb923c28 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* ─── Rainbow stripe ─── */
+.rainbow-stripe {
+  height: 5px;
+  background: repeating-linear-gradient(
+    to right,
+    #f43f5e  0px,  #f43f5e  40px,
+    #fb923c  40px, #fb923c  80px,
+    #fde68a  80px, #fde68a 120px,
+    #7dd3fc 120px, #7dd3fc 160px,
+    #f9a8d4 160px, #f9a8d4 200px
+  );
+  border-top: 1.5px solid #3b2a1a;
+  border-bottom: 1.5px solid #3b2a1a;
+}
+
+/* ─── Pixel offset card ─── */
+.pixel-card {
+  border: 2px solid #3b2a1a;
+  box-shadow: 4px 4px 0 #3b2a1a;
+  background: #fffdf5;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.pixel-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #3b2a1a;
+}
+
+/* ─── Photo frame — stacked color shadows ─── */
+.pixel-frame {
+  border: 3px solid #3b2a1a;
+  box-shadow:
+    6px  6px  0 #fb923c,
+    12px 12px 0 #f9a8d4,
+    18px 18px 0 #7dd3fc;
+}
+
+/* ─── Tab buttons ─── */
+.tab-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  padding: 0.7rem 1.1rem;
+  border: 2px solid #3b2a1a;
+  border-bottom: none;
+  background: #f0e0c0;
+  color: #7a5c3e;
+  cursor: pointer;
+  margin-right: 4px;
+  line-height: 1.6;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+.tab-btn:hover {
+  background: #fde68a;
+  color: #3b2a1a;
+}
+.tab-btn.active {
+  background: #fdf6e3;
+  color: #f43f5e;
+  z-index: 1;
+}
+
+/* ─── Tech chip ─── */
+.tech-chip {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.45rem;
+  padding: 5px 10px;
+  border: 2px solid #3b2a1a;
+  box-shadow: 2px 2px 0 #3b2a1a;
+  background: #fdf6e3;
+  color: #3b2a1a;
+  line-height: 1.8;
+}
+
+/* ─── Pixel button ─── */
+.pixel-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  padding: 8px 14px;
+  border: 2px solid #3b2a1a;
+  box-shadow: 3px 3px 0 #3b2a1a;
+  background: #fde68a;
+  color: #3b2a1a;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.6;
+  display: inline-block;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.pixel-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #3b2a1a;
+}
+.pixel-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #3b2a1a;
+}
