@@ -133,6 +133,9 @@ export default function Hero() {
             <a href="mailto:zburnside14@gmail.com" className="pixel-btn">
               EMAIL ↗
             </a>
+            <a href="sms:8019199043" className="pixel-btn" style={{ background: "#bbf7d0" }}>
+              TEXT ↗
+            </a>
             <a
               href="https://www.linkedin.com/in/zach-burnside/"
               target="_blank"
