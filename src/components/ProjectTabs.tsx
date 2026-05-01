@@ -1,4 +1,4 @@
-type Tab = 'Candid' | 'Blushing Blossoms' | 'CineNiche' | 'Basketball Stats'
+type Tab = 'Candid' | 'Blushing Blossoms' | 'Basketball Stats' | 'Jeopardy' | 'CineNiche'
 
 interface ProjectData {
   emoji: string
@@ -25,22 +25,34 @@ const projects: Record<Tab, ProjectData> = {
   'Candid': {
     emoji: '📸',
     image: '/Candid.png',
-    type: 'AI · HR PLATFORM',
+    type: 'AI · HR PRODUCT · EY FINALIST',
     accentBg: '#fde68a',
     accentBorder: '#fb923c',
     tech: ['React', 'Python', 'PostgreSQL', 'scikit-learn', 'Claude'],
-    description: 'An HR platform that matches employees to open roles using a machine learning pipeline that scores skill-to-job fit and improves over time by learning from real hiring outcomes. Resume parsing auto-extracts and rates skills into structured fields. LLM-generated explanations tell admins in plain English why a candidate was recommended, and AI-driven upskilling plans come with printable PDF roadmaps so employees know exactly what to work on. All backed by a normalized relational database built from scratch.',
+    description: 'Selected as national finalists in the EY Case Competition for this AI-powered HR platform. Candid matches employees to open roles using a machine learning pipeline that scores skill-to-job fit and improves over time by learning from real hiring outcomes. Resume parsing auto-extracts and rates skills into structured fields. LLM-generated explanations tell admins in plain English why a candidate was recommended, and AI-driven upskilling plans come with printable PDF roadmaps so employees know exactly what to work on. All backed by a normalized relational database built from scratch.',
     github: 'https://github.com/tatematley/AISComp',
+    live: 'https://candid-chg.pages.dev/',
   },
   'Blushing Blossoms': {
     emoji: '🌸',
     image: '/blushingBlossoms.png',
-    type: 'FLORAL BUSINESS SITE',
+    type: 'REAL BUSINESS · FULL-STACK',
     accentBg: '#f9a8d4',
     accentBorder: '#f43f5e',
     tech: ['React', 'ASP.NET', 'C#'],
-    description: 'A professional website built for my wife\'s floral business. Features a photo gallery to showcase arrangements and an inquiry form that delivers client requests directly to her business email. Built with a React frontend and an ASP.NET backend to handle form submissions and email delivery.',
+    description: 'A professional website built for my wife\'s floral business, which has generated over $22,500 in revenue. Features a photo gallery to showcase arrangements and an inquiry form that delivers client requests directly to her business email. Built with a React frontend and an ASP.NET backend to handle form submissions and email delivery.',
     github: 'https://github.com/zburnsie/blushing-blossoms',
+    live: 'https://blushingblossoms.co',
+  },
+  'Jeopardy': {
+    emoji: '❓',
+    image: '/jeopardy.png',
+    type: 'GAME · REAL-TIME MULTIPLAYER',
+    accentBg: '#c4b5fd',
+    accentBorder: '#7c3aed',
+    tech: ['Real-Time', 'Multiplayer', 'Mobile'],
+    description: 'A fully playable Jeopardy game built for my wife\'s birthday party. Features a real-time buzzer system — players join on their phones and hit a buzzer button, and the app instantly identifies which team pressed first. Custom categories, a scoring system, and classic game-show mechanics, all built to work across devices.',
+    github: 'https://github.com/zburnsie/jeopardyGame',
   },
   'CineNiche': {
     emoji: '🎬',
@@ -53,11 +65,13 @@ const projects: Record<Tab, ProjectData> = {
   },
   'Basketball Stats': {
     emoji: '🏀',
-    type: 'STATS DASHBOARD',
+    image: '/basketball_stats.png',
+    type: 'PERSONAL DASHBOARD · SPORTS ANALYTICS',
     accentBg: '#fb923c',
     accentBorder: '#ea580c',
     tech: ['React', 'D3.js', 'REST API'],
-    description: 'Description coming soon — drop your write-up here.',
+    description: 'A personal stats tracker that pulls in my city league game data and visualizes it styled like the basketball cards I was obsessed with growing up. PPG, FT%, 3PT%, career highs, season breakdowns — all the numbers, with the aesthetic to match.',
+    live: 'https://zach-stats.vercel.app/',
   },
 }
 
@@ -178,7 +192,7 @@ export default function ProjectTabs({ tabs, activeTab, onTabChange }: Props) {
 
               <div style={{ display: 'flex', gap: '0.75rem' }}>
                 {project.github && <a href={project.github} target="_blank" rel="noreferrer" className="pixel-btn">GITHUB ↗</a>}
-                {project.live && <a href={project.live} target="_blank" rel="noreferrer" className="pixel-btn" style={{ background: project.accentBg }}>LIVE ↗</a>}
+                {project.live && <a href={project.live} target="_blank" rel="noreferrer" className="pixel-btn" style={{ background: '#4ade80' }}>LIVE ↗</a>}
               </div>
             </div>
 

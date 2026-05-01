@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 import ProjectTabs from './components/ProjectTabs'
 import './App.css'
 
-const TABS = ['Candid', 'Blushing Blossoms', 'CineNiche', 'Basketball Stats'] as const
+const TABS = ['Candid', 'Blushing Blossoms', 'Basketball Stats', 'Jeopardy', 'CineNiche'] as const
 type Tab = typeof TABS[number]
 
 function App() {

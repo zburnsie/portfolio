@@ -64,7 +64,7 @@ export default function Hero() {
               letterSpacing: "0.1em",
             }}
           >
-            DATA ANALYST · DEVELOPER
+            BUILDER · DATA ANALYST · ENTREPRENEUR
           </span>
 
           {/* Name */}
@@ -102,19 +102,19 @@ export default function Hero() {
             games.
             <br />
             <br />
-            That obsession with data never left, it just grew up. Today I
-            channel that same instinct into data analytics: finding the signal
-            in the noise, and turning numbers into decisions that actually
-            matter.
+            That obsession with data never left, it just grew up. Now I build
+            things with it — full-stack apps, ML pipelines, AI platforms —
+            driven by the same instinct: find what matters, and make something
+            real out of it.
             <br />
             <br />
-            I'm looking for data roles where curiosity, sports, and meaningful
-            insights collide.
+            I'm drawn to entrepreneurship because I don't just want to analyze
+            problems. I want to build the solution.
           </p>
 
           {/* Tech chips */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
-            {["Python", "SQL", "React", "Data Viz"].map((tag) => (
+            {["Python", "SQL", "React", "ML", "Full-Stack"].map((tag) => (
               <span key={tag} className="tech-chip">
                 {tag}
               </span>
